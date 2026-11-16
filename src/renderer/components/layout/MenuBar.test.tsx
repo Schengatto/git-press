@@ -377,7 +377,7 @@ describe("MenuBar", () => {
     fireEvent.click(screen.getByText("menu.reportIssue"));
     expect(mockElectronAPI.repo.openExternal).toHaveBeenCalledWith(
       expect.stringContaining(
-        "https://github.com/CODEPRESS-SRL/git-press/issues/new?labels=bug&title="
+        "https://github.com/Schengatto/git-press/issues/new?labels=bug&title="
       )
     );
   });

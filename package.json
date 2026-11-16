@@ -18,13 +18,13 @@
     "version-control",
     "desktop"
   ],
-  "homepage": "https://github.com/CODEPRESS-SRL/git-press#readme",
+  "homepage": "https://github.com/Schengatto/git-press#readme",
   "bugs": {
-    "url": "https://github.com/CODEPRESS-SRL/git-press/issues"
+    "url": "https://github.com/Schengatto/git-press/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/CODEPRESS-SRL/git-press.git"
+    "url": "https://github.com/Schengatto/git-press.git"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
@@ -36,7 +36,7 @@
     "publish": [
       {
         "provider": "github",
-        "owner": "CODEPRESS-SRL",
+        "owner": "Schengatto",
         "repo": "git-press"
       }
     ]

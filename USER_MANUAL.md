@@ -115,7 +115,7 @@ GitPress is a cross-platform Git GUI desktop app inspired by [Git Extensions](ht
 
 ### Install from Release
 
-Download the appropriate installer from the [GitHub Releases](https://github.com/CODEPRESS-SRL/git-press/releases) page:
+Download the appropriate installer from the [GitHub Releases](https://github.com/Schengatto/git-press/releases) page:
 
 - **Windows:** MSI installer (`.msi`) or Portable ZIP archive
 - **macOS:** ZIP archive (`.zip`) for Apple Silicon
@@ -160,7 +160,7 @@ xattr -cr /Applications/GitPress.app
 ### Build from Source
 
 ```bash
-git clone https://github.com/CODEPRESS-SRL/git-press.git
+git clone https://github.com/Schengatto/git-press.git
 cd git-press
 npm install
 npm start          # Launch in development mode
@@ -1196,7 +1196,7 @@ The update is downloaded in the background and installed on restart.
 
 ### Antivirus Scan
 
-Every release is automatically scanned with [VirusTotal](https://www.virustotal.com), which checks binaries against approximately 70 antivirus engines. Scan results with direct links to full reports are included in each [GitHub release](https://github.com/CODEPRESS-SRL/git-press/releases). If any file receives 3 or more malicious detections, the release is blocked until investigated.
+Every release is automatically scanned with [VirusTotal](https://www.virustotal.com), which checks binaries against approximately 70 antivirus engines. Scan results with direct links to full reports are included in each [GitHub release](https://github.com/Schengatto/git-press/releases). If any file receives 3 or more malicious detections, the release is blocked until investigated.
 
 ---
 
@@ -1327,5 +1327,5 @@ Make sure Git is updated (2.30+). Press `F5` to refresh the repository status.
 ---
 
 *GitPress is open-source software released under the MIT license.*
-*Repository: https://github.com/CODEPRESS-SRL/git-press*
-*Report bugs: https://github.com/CODEPRESS-SRL/git-press/issues*
+*Repository: https://github.com/Schengatto/git-press*
+*Report bugs: https://github.com/Schengatto/git-press/issues*

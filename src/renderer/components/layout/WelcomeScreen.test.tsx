@@ -203,7 +203,7 @@ describe("WelcomeScreen", () => {
     render(<WelcomeScreen />);
     fireEvent.click(screen.getByText("welcome.develop"));
     expect(mockElectronAPI.repo.openExternal).toHaveBeenCalledWith(
-      "https://github.com/CODEPRESS-SRL/git-press"
+      "https://github.com/Schengatto/git-press"
     );
   });
 
@@ -212,7 +212,7 @@ describe("WelcomeScreen", () => {
     fireEvent.click(screen.getByText("welcome.issues"));
     expect(mockElectronAPI.repo.openExternal).toHaveBeenCalledWith(
       expect.stringContaining(
-        "https://github.com/CODEPRESS-SRL/git-press/issues/new?labels=bug&title="
+        "https://github.com/Schengatto/git-press/issues/new?labels=bug&title="
       )
     );
   });

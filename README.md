@@ -1,14 +1,48 @@
+<div align="center">
+
+<img src="assets/icon.png" alt="GitPress" width="96" />
+
 # GitPress
 
-[![CI](https://github.com/CODEPRESS-SRL/git-press/actions/workflows/ci.yml/badge.svg)](https://github.com/CODEPRESS-SRL/git-press/actions/workflows/ci.yml)
+**A fast, free Git GUI for Windows, macOS and Linux, with AI built in.**
+
+[![CI](https://github.com/Schengatto/git-press/actions/workflows/ci.yml/badge.svg)](https://github.com/Schengatto/git-press/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-Cross-platform Git GUI inspired by [GitExtensions](https://gitextensions.github.io/), built with **Electron**, **React**, and **TypeScript**.
+[Website](https://schengatto.github.io/git-press/) &nbsp;·&nbsp; [Download](https://github.com/Schengatto/git-press/releases/latest) &nbsp;·&nbsp; [User manual](USER_MANUAL.md) &nbsp;·&nbsp; [Changelog](CHANGELOG.md)
 
-<p align="center">
-  <img src="assets/icon.png" alt="GitPress" width="128" />
-</p>
+</div>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="website/images/screenshots/dark.png">
+  <img src="website/images/screenshots/light.png" alt="GitPress main window: commit graph, staging panel and diff viewer">
+</picture>
+
+GitPress is a desktop Git client inspired by [GitExtensions](https://gitextensions.github.io/), rebuilt for every
+platform with Electron, React and TypeScript. It shows your whole history as a virtualized commit graph that stays
+smooth on large repositories, lets you stage single hunks, and turns interactive rebase into drag and drop.
+Every Git command it runs is visible in the command log, so nothing happens behind your back.
+
+## Why GitPress
+
+- **The graph is the interface.** Branches, merges, cherry-picks, resets and tags start from the commit graph.
+- **Precise staging.** Stage files, hunks or single lines, then review them in a unified or side-by-side diff.
+- **Interactive rebase without the editor.** Reorder, squash and drop commits with drag and drop.
+- **AI where it saves time.** Commit messages, conflict resolution, pull request descriptions and code review, with your own provider.
+- **Scriptable by agents.** A built-in MCP server exposes 50+ Git operations to Claude, ChatGPT, Copilot or any MCP client.
+
+## AI features
+
+Configure a provider in **Settings → AI / MCP** (Anthropic Claude, OpenAI GPT or Google Gemini) with your own API key.
+
+| Feature | What it does |
+|---|---|
+| **Commit messages** | Reads the staged diff and proposes a Conventional Commits message you can edit before committing. |
+| **Conflict resolution** | In the 3-way merge editor, analyzes base, ours and theirs and previews a resolution you accept, edit or reject. |
+| **Pull request descriptions** | Writes title and description from the branch commits, following the repository PR template when one exists. |
+| **Code review** | Right-click a commit or a range to get a review of bugs, security, performance and style in a dedicated panel. |
+| **MCP server** | Exposes 50+ read and write Git operations (status, log, diff, blame, branches, commit, merge, rebase, push, stash) to external AI assistants. |
 
 ## Features
 
@@ -49,7 +83,7 @@ Cross-platform Git GUI inspired by [GitExtensions](https://gitextensions.github.
 
 ## Installation
 
-Download the latest release from the [GitHub Releases](https://github.com/CODEPRESS-SRL/git-press/releases) page:
+Download the latest release from the [GitHub Releases](https://github.com/Schengatto/git-press/releases) page:
 
 - **Windows:** MSI installer or Portable ZIP
 - **macOS:** ZIP archive (Apple Silicon)
@@ -72,7 +106,7 @@ Download the latest release from the [GitHub Releases](https://github.com/CODEPR
 ### Install & Run
 
 ```bash
-git clone https://github.com/CODEPRESS-SRL/git-press.git
+git clone https://github.com/Schengatto/git-press.git
 cd git-press
 npm install
 npm start
@@ -129,7 +163,7 @@ Before contributing, please review our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 To report a vulnerability, please see [SECURITY.md](SECURITY.md).
 
-All release binaries are scanned with [VirusTotal](https://www.virustotal.com) (~70 antivirus engines). Scan reports are linked in each [GitHub release](https://github.com/CODEPRESS-SRL/git-press/releases).
+All release binaries are scanned with [VirusTotal](https://www.virustotal.com) (~70 antivirus engines). Scan reports are linked in each [GitHub release](https://github.com/Schengatto/git-press/releases).
 
 ## Changelog
 
