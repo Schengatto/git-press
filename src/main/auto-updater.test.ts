@@ -192,7 +192,7 @@ describe("initAutoUpdater", () => {
       await vi.runAllTimersAsync();
 
       expect(mockOpenExternal).toHaveBeenCalledWith(
-        "https://github.com/CODEPRESS-SRL/git-press/releases/latest"
+        "https://github.com/Schengatto/git-press/releases/latest"
       );
     });
 

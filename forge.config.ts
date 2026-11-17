@@ -71,7 +71,7 @@ const config: ForgeConfig = {
   ],
   publishers: [
     new PublisherGithub({
-      repository: { owner: "CODEPRESS-SRL", name: "git-press" },
+      repository: { owner: "Schengatto", name: "git-press" },
       prerelease: false,
       draft: false,
     }),
@@ -147,7 +147,7 @@ const config: ForgeConfig = {
       // Generate app-update.yml for electron-updater (must be in resources/, outside asar)
       const appUpdateYml = [
         "provider: github",
-        "owner: CODEPRESS-SRL",
+        "owner: Schengatto",
         "repo: git-press",
       ].join("\n");
       for (const outputPath of outputPaths) {
