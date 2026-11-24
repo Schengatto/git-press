@@ -171,7 +171,8 @@ jobs:
             ANALYSIS_URL="${ENTRY#*=}"
             if [ -z "$ANALYSIS_URL" ] || [ -z "$FILE_PATH" ]; then continue; fi
 
-            ANALYSIS_ID="${ANALYSIS_URL##*/}"
+            ANALYSIS_ID="${ANALYSIS_URL%/detection}"
+            ANALYSIS_ID="${ANALYSIS_ID##*/}"
             FILENAME=$(basename "$FILE_PATH")
 
             echo "Polling analysis for $FILENAME (ID: $ANALYSIS_ID)..."
@@ -179,13 +180,12 @@ jobs:
             for i in $(seq 1 $MAX_POLLS); do
               sleep "$POLL_INTERVAL"
 
-              RESPONSE=$(curl -sf -H "x-apikey: $VT_API_KEY" \
-                "https://www.virustotal.com/api/v3/analyses/$ANALYSIS_ID") || {
-                echo "  WARNING: curl failed for $FILENAME (poll $i), retrying..."
-                continue
-              }
-
-              STATUS=$(echo "$RESPONSE" | jq -r '.data.attributes.status')
+              if RESPONSE=$(curl -sf -H "x-apikey: $VT_API_KEY" \
+                "https://www.virustotal.com/api/v3/analyses/$ANALYSIS_ID"); then
+                STATUS=$(echo "$RESPONSE" | jq -r '.data.attributes.status')
+              else
+                STATUS="request-failed"
+              fi
 
               if [ "$STATUS" = "completed" ]; then
                 MALICIOUS=$(echo "$RESPONSE" | jq -r '.data.attributes.stats.malicious')
